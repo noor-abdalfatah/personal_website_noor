@@ -33,7 +33,7 @@ const skills: Skill[] = [
   { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
   { name: "Python", icon: SiPython, color: "#3776AB" },
   { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
-  { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+  { name: "CSS3", icon: SiCss, color: "#1572B6" },
   { name: "Git", icon: SiGit, color: "#F05032" },
   { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
 ];
