@@ -17,7 +17,7 @@ export function About() {
           <SectionPill>About Me</SectionPill>
           <h2 className="mt-6 text-4xl leading-tight font-bold md:text-5xl">
             Crafting refined web experiences,{" "}
-            <span className="gradient-text">line by line</span>
+            <span className="gradient-text font-rakkas">line by line</span>
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
             I&apos;m Noor Abdalfatah, a Full Stack Web Developer and Computer Systems

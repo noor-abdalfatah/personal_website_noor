@@ -66,7 +66,7 @@ export function Skills() {
         <Reveal>
           <SectionPill>Skills</SectionPill>
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-            My <span className="gradient-text">tech stack</span>
+            My <span className="gradient-text font-rakkas">tech stack</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             The tools I reach for daily, across the front-end, the back-end, and everything

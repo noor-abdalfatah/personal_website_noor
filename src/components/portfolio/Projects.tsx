@@ -100,7 +100,7 @@ export function Projects() {
         <Reveal className="text-center">
           <SectionPill>Projects</SectionPill>
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-            Selected <span className="gradient-text">work</span>
+            Selected <span className="gradient-text font-rakkas">work</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             A few full stack builds where design detail and solid architecture meet.
