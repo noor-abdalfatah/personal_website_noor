@@ -1,50 +1,60 @@
 import {
-  Atom,
-  Braces,
-  Coffee,
-  Database,
-  FileCode2,
-  GitBranch,
-  Github,
-  Layers,
-  Paintbrush,
-  Server,
-  Terminal,
-  Triangle,
-  Wind,
-} from "lucide-react";
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiPhp,
+  SiMysql,
+  SiNodedotjs,
+  SiPython,
+  SiHtml5,
+  SiCss3,
+  SiGit,
+  SiGithub,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
 import { Reveal, SectionPill } from "./Reveal";
 
-const skills = [
-  { name: "React", icon: Atom },
-  { name: "Next.js", icon: Triangle },
-  { name: "TypeScript", icon: Braces },
-  { name: "JavaScript", icon: FileCode2 },
-  { name: "Tailwind CSS", icon: Wind },
-  { name: "PHP", icon: Server },
-  { name: "MySQL", icon: Database },
-  { name: "Node.js", icon: Layers },
-  { name: "Python", icon: Terminal },
-  { name: "HTML5", icon: Coffee },
-  { name: "CSS3", icon: Paintbrush },
-  { name: "Git", icon: GitBranch },
-  { name: "GitHub", icon: Github },
+interface Skill {
+  name: string;
+  icon: IconType;
+  color: string;
+}
+
+const skills: Skill[] = [
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "PHP", icon: SiPhp, color: "#777BB4" },
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "Python", icon: SiPython, color: "#3776AB" },
+  { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+  { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+  { name: "Git", icon: SiGit, color: "#F05032" },
+  { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
 ];
 
 function Strip({ reverse = false }: { reverse?: boolean }) {
   return (
     <div className="flex w-max animate-marquee gap-5" style={reverse ? { animationDirection: "reverse" } : undefined}>
-      {[...skills, ...skills].map((skill, index) => (
-        <div
-          key={`${skill.name}-${index}`}
-          className="glass-panel flex shrink-0 items-center gap-3 rounded-2xl px-6 py-4 transition-all duration-300 hover:glow-ring hover:scale-105"
-        >
-          <skill.icon size={20} className="text-primary" />
-          <span className="text-sm font-semibold whitespace-nowrap text-foreground">
-            {skill.name}
-          </span>
-        </div>
-      ))}
+      {[...skills, ...skills].map((skill, index) => {
+        const Icon = skill.icon;
+        return (
+          <div
+            key={`${skill.name}-${index}`}
+            className="glass-panel flex shrink-0 items-center gap-3 rounded-2xl px-6 py-4 transition-all duration-300 hover:glow-ring hover:scale-105"
+          >
+            <Icon size={22} style={{ color: skill.color }} className="shrink-0" />
+            <span className="text-sm font-semibold whitespace-nowrap text-foreground">
+              {skill.name}
+            </span>
+          </div>
+        );
+      })}
     </div>
   );
 }
