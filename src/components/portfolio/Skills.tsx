@@ -9,7 +9,7 @@ import {
   SiNodedotjs,
   SiPython,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiGit,
   SiGithub,
 } from "react-icons/si";
