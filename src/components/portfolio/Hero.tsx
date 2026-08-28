@@ -11,9 +11,9 @@ export function Hero() {
             Available for new projects
           </span>
           <h1 className="mt-8 text-5xl leading-[1.05] font-bold md:text-7xl">
-            Hi I'm Noor Abdalfatah
+            <span className="font-script">Hi I'm Noor Abdalfatah</span>
             <br />
-            <span className="gradient-text">Full Stack Web Developer</span>
+            <span className="gradient-text font-rakkas">Full Stack Web Developer</span>
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-lg text-muted-foreground">
             I design and build responsive, high-performance web applications — from polished

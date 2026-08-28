@@ -35,7 +35,7 @@ export function Contact() {
         <Reveal>
           <SectionPill>Contact Me</SectionPill>
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-            Let&apos;s build something <span className="gradient-text">beautiful</span>
+            Let&apos;s build something <span className="gradient-text font-rakkas">beautiful</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Open to internships, freelance work, and collaborations. Reach out through any

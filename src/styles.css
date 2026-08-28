@@ -21,6 +21,8 @@
 
   --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Pacifico", cursive;
+  --font-rakkas: "Rakkas", "Outfit", display;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
