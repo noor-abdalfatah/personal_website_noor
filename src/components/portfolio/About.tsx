@@ -75,7 +75,7 @@ export function About() {
                 strokeWidth="1"
               />
             </svg>
-            <div className="glass-panel relative overflow-hidden rounded-[2.5rem] p-3 shadow-lux">
+            <div className="glass-panel relative overflow-hidden rounded-[2.5rem] p-3 shadow-lux transition-all duration-500 hover:animate-pulse-glow">
               <img
                 src={portrait}
                 alt="Portrait of Noor Abdalfatah"
