@@ -26,7 +26,7 @@ export function Reveal({
 
 export function SectionPill({ children }: { children: ReactNode }) {
   return (
-    <span className="gradient-pill inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold tracking-wide uppercase shadow-lux">
+    <span className="gradient-pill inline-flex items-center rounded-full border border-white/20 px-7 py-2.5 text-sm font-bold tracking-widest uppercase shadow-lux">
       {children}
     </span>
   );
