@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Github, Info } from "lucide-react";
+import { ChevronLeft, ChevronRight, Github, Info } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
