@@ -116,7 +116,12 @@ export function Projects() {
                   className="pl-6 sm:basis-1/2 lg:basis-1/3"
                 >
                   <article className="glass-panel group flex h-full flex-col overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:glow-ring">
-                    <div className="overflow-hidden">
+                    <div
+                      className="cursor-pointer overflow-hidden"
+                      onClick={() => setActive(project)}
+                      role="button"
+                      aria-label={`Open details for ${project.title}`}
+                    >
                       <img
                         src={project.image}
                         alt={`${project.title} preview`}
