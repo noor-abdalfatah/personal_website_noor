@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Github, Info } from "lucide-react";
+import { ChevronLeft, ChevronRight, Github, Info } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -169,21 +169,41 @@ export function Projects() {
             <CarouselNext className="hidden lg:flex" />
           </Carousel>
 
-          <div className="mt-10 flex items-center justify-center gap-3">
-            {projects.map((project, index) => (
-              <button
-                key={project.title}
-                type="button"
-                aria-label={`Go to ${project.title}`}
-                onClick={() => api?.scrollTo(index)}
-                className={cn(
-                  "h-2.5 rounded-full transition-all duration-300",
-                  selected === index
-                    ? "w-10 bg-primary glow-ring"
-                    : "w-2.5 bg-border hover:bg-accent",
-                )}
-              />
-            ))}
+          <div className="mt-10 flex items-center justify-center gap-4">
+            <button
+              type="button"
+              aria-label="Previous project"
+              onClick={() => api?.scrollPrev()}
+              className="grid h-11 w-11 place-items-center rounded-full border border-glass-border bg-card/80 text-primary shadow-lux transition-all duration-300 hover:glow-ring hover:scale-110 hover:bg-card"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <div className="flex items-center gap-3">
+              {projects.map((project, index) => (
+                <button
+                  key={project.title}
+                  type="button"
+                  aria-label={`Go to ${project.title}`}
+                  onClick={() => api?.scrollTo(index)}
+                  className={cn(
+                    "h-2.5 rounded-full transition-all duration-300",
+                    selected === index
+                      ? "w-10 bg-primary glow-ring"
+                      : "w-2.5 bg-border hover:bg-accent",
+                  )}
+                />
+              ))}
+            </div>
+
+            <button
+              type="button"
+              aria-label="Next project"
+              onClick={() => api?.scrollNext()}
+              className="grid h-11 w-11 place-items-center rounded-full border border-glass-border bg-card/80 text-primary shadow-lux transition-all duration-300 hover:glow-ring hover:scale-110 hover:bg-card"
+            >
+              <ChevronRight size={20} />
+            </button>
           </div>
         </Reveal>
       </div>
