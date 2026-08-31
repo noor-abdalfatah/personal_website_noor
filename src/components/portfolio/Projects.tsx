@@ -33,7 +33,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Aurora Commerce",
+    title: "Jessbella",
     image: project1,
     tagline: "Full stack storefront & admin dashboard",
     description:
@@ -45,37 +45,37 @@ const projects: Project[] = [
       "Normalized MySQL schema with indexed order lookups and transactional checkout.",
       "Role-based auth with hashed sessions and server-side validation on every mutation.",
     ],
-    github: "https://github.com/placeholder/aurora-commerce",
+    github: "https://github.com/noor-abdalfatah/-Jessbella-By-Noor",
   },
   {
-    title: "Nova Tasks",
+    title: "Juicy Restaurant",
     image: project2,
-    tagline: "Collaborative task & sprint planner",
+    tagline: "Professional restaurant interface for task management.",
     description:
-      "A responsive team workspace with drag-ordered boards, live activity feed and role-aware permissions.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+      " A Website modern burger restaurant website built using HTML and CSS. The project features a responsive design with sections for the menu, offers, customer reviews, and an order form, using a clean navy and orange color theme.",
+    stack: ["HTML", "CSS", "JavaScript"],
     architecture: [
-      "Next.js app router with server components for board data and streaming skeletons.",
       "Event-sourced activity log so every card change is auditable and reversible.",
       "Optimistic reordering synced through a debounced batch endpoint.",
       "Mobile-first layout that collapses columns into a swipeable stack.",
     ],
-    github: "https://github.com/placeholder/nova-tasks",
+    github: "https://github.com/noor-abdalfatah/Juicy-Restaurant",
   },
   {
-    title: "Pulse Analytics",
+    title: "Bloom Flower Shop",
     image: project3,
     tagline: "Realtime metrics & reporting suite",
     description:
-      "A data visualization dashboard turning raw event streams into readable charts and exportable reports.",
-    stack: ["React", "Python", "PHP", "MySQL", "Recharts"],
-    architecture: [
-      "Python ingestion workers aggregate raw events into hourly rollup tables.",
-      "PHP reporting endpoints serve cached aggregates with ETag revalidation.",
-      "React chart layer with responsive containers and accessible tooltips.",
-      "CSV/PDF export pipeline generated fully server-side to keep the client light.",
+      "A modern, responsive flower shop website showcasing fresh flowers, bouquets, and a gallery.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      architecture: [
+        "Responsive Design Optimized for all screen sizes.",
+      "Semantic HTML5 Clean and accessible structure.",
+      "Modern CSS Elegant layouts, animations, and visual effects.",
+      "JavaScript Interactions Dynamic and interactive user experience.",
+      "Reusable Sections — Organized into modular, maintainable sections.",
     ],
-    github: "https://github.com/placeholder/pulse-analytics",
+    github: "https://github.com/noor-abdalfatah/Bloom-Flower-Shop",
   },
 ];
 
@@ -128,7 +128,7 @@ export function Projects() {
                         loading="lazy"
                         width={1024}
                         height={640}
-                        className="h-44 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="h-44 w-full object-contain bg-background/60 transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
                     <div className="flex flex-1 flex-col p-6">
@@ -218,7 +218,7 @@ export function Projects() {
                 loading="lazy"
                 width={1024}
                 height={640}
-                className="h-48 w-full rounded-2xl object-cover"
+                className="h-64 w-full rounded-2xl object-contain bg-background/60 p-2"
               />
               <DialogHeader>
                 <DialogTitle className="text-2xl">{active.title}</DialogTitle>

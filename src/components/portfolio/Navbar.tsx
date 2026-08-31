@@ -34,12 +34,12 @@ export function Navbar() {
         <a href="#top" className="group flex items-center gap-3">
           <span className="neon-aura relative block">
             <img
-              src={avatar}
-              alt="Noor Abdalfatah portrait"
-              width={512}
-              height={512}
-              className="h-11 w-11 rounded-full border border-glass-border object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+              src={avatar}
+              alt="Noor Abdalfatah portrait"
+              // width={512}
+              // height={512}
+              className="relative h-12 w-12 overflow-hidden rounded-full border border-glass-border"
+            />
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-sm font-semibold text-foreground">

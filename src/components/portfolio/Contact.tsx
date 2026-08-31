@@ -4,11 +4,11 @@ import { toast } from "sonner";
 import { Reveal, SectionPill } from "./Reveal";
 
 const socials = [
-  { label: "Instagram", icon: Instagram, href: "https://instagram.com/placeholder" },
-  { label: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/in/placeholder" },
-  { label: "WhatsApp", icon: MessageCircle, href: "https://wa.me/000000000" },
-  { label: "GitHub", icon: Github, href: "https://github.com/placeholder" },
-  { label: "Email", icon: Mail, href: "mailto:hello@example.com" },
+  { label: "Instagram", icon: Instagram, href: "https://www.instagram.com/noor_abdalfatah2004/" },
+  { label: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/noor-abdalfatah-0b0849343/" },
+  { label: "WhatsApp", icon: MessageCircle, href: "https://wa.me/970593434605" },
+  { label: "GitHub", icon: Github, href: "https://github.com/noor-abdalfatah" },
+  { label: "Email", icon: Mail, href: "mailto:noorabdalfatah9@gmail.com" },
 ];
 
 const fieldClass =
@@ -17,16 +17,40 @@ const fieldClass =
 export function Contact() {
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      event.currentTarget?.reset?.();
-      toast.success("Message sent!", {
-        description: "Thanks for reaching out — I'll reply as soon as I can.",
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xrpgbnrg", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
       });
-    }, 700);
+
+      if (response.ok) {
+        toast.success("Message sent successfully!", {
+          description: "Thanks for reaching out — I'll reply as soon as I can.",
+        });
+        form.reset();
+      } else {
+        const errorData = await response.json().catch(() => null);
+        toast.error("Failed to send message.", {
+          description: errorData?.error || "Please check your inputs and try again.",
+        });
+      }
+    } catch {
+      toast.error("Network error.", {
+        description: "Please check your internet connection.",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (

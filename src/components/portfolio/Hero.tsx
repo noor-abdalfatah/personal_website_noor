@@ -16,8 +16,8 @@ export function Hero() {
             <span className="gradient-text font-rakkas">Full Stack Web Developer</span>
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-lg text-muted-foreground">
-            I design and build responsive, high-performance web applications — from polished
-            interfaces to the APIs and databases behind them.
+           I help businesses build websites that combine clean, precise coding with the ability to transform their ideas into scalable digital products designed for sustainable growth, backed by over 5 years of experience.
+
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a

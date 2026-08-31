@@ -20,8 +20,7 @@ export function About() {
             <span className="gradient-text font-rakkas">line by line</span>
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-            I&apos;m Noor Abdalfatah, a Full Stack Web Developer and Computer Systems
-            Engineering student who loves turning complex ideas into elegant, responsive
+            I&apos;m Noor Abdalfatah, a Full Stack Web Developer who loves turning complex ideas into elegant, responsive
             interfaces. I build from the database up: designing clean schemas, writing
             dependable APIs, and finishing with front-ends that feel fast, accessible, and
             genuinely pleasant to use.
