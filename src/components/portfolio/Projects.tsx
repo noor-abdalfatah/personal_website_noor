@@ -50,21 +50,21 @@ const projects: Project[] = [
   {
     title: "Juicy Restaurant",
     image: project2,
-    tagline: "Professional restaurant interface for task management.",
+    tagline: "Responsive burger restaurant website",
     description:
       " A Website modern burger restaurant website built using HTML and CSS. The project features a responsive design with sections for the menu, offers, customer reviews, and an order form, using a clean navy and orange color theme.",
     stack: ["HTML", "CSS", "JavaScript"],
     architecture: [
-      "Event-sourced activity log so every card change is auditable and reversible.",
-      "Optimistic reordering synced through a debounced batch endpoint.",
-      "Mobile-first layout that collapses columns into a swipeable stack.",
-    ],
+  "Mobile-first responsive layout built with HTML and CSS.",
+  "Clear sections for menu, offers, customer reviews, and an order form.",
+  "Clean navy and orange color theme for a consistent look.",
+],
     github: "https://github.com/noor-abdalfatah/Juicy-Restaurant",
   },
   {
     title: "Bloom Flower Shop",
     image: project3,
-    tagline: "Realtime metrics & reporting suite",
+    tagline: "Modern flower shop website",
     description:
       "A modern, responsive flower shop website showcasing fresh flowers, bouquets, and a gallery.",
       stack: ["HTML", "CSS", "JavaScript"],
